@@ -12,6 +12,8 @@ install.packages("devtools")
 
 # Install FMIndex from GitHub
 devtools::install_github("negin-kafee/FMIndex")
+```
+
 
 ## Usage
 
@@ -20,6 +22,7 @@ library(FMIndex)
 
 # Compute FM Index for a sample FASTA file
 fm_index("example.fasta", "output")
+```
 
 ## Documentation
 

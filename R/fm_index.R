@@ -69,26 +69,26 @@ compress_file <- function(file_path) {
 
 bw_transform <- function(seq) {
   n <- nchar(seq)
-  rotations <- sapply(seq_len(n), function(i) {
+  rotations <- vapply(seq_len(n), function(i) {
     paste0(substr(seq, i, n), substr(seq, 1, i - 1))
-  })
+  }, character(1))
   sorted_rotations <- sort(rotations)
   paste0(substr(sorted_rotations, n, n), collapse = "")
 }
 
 suffix_array <- function(seq) {
   n <- nchar(seq)
-  suffixes <- sapply(seq_len(n) - 1, function(i) {
+  suffixes <- vapply(seq_len(n) - 1, function(i) {
     substr(seq, i + 1, n)
-  })
+  }, character(1))
   order(suffixes)
 }
 
 occurrence_table <- function(bwt) {
   alphabet <- sort(unique(unlist(strsplit(bwt, ""))))
-  occ <- sapply(alphabet, function(c) {
+  occ <- vapply(alphabet, function(c) {
     cumsum(unlist(strsplit(bwt, "")) == c)
-  })
+  }, numeric(nchar(bwt)))
   colnames(occ) <- alphabet
   occ
 }
@@ -96,9 +96,9 @@ occurrence_table <- function(bwt) {
 c_table <- function(bwt) {
   sorted_bwt <- sort(unlist(strsplit(bwt, "")))
   alphabet <- unique(sorted_bwt)
-  c_table <- sapply(alphabet, function(c) {
+  c_table <- vapply(alphabet, function(c) {
     sum(sorted_bwt < c)
-  })
+  }, integer(1))
   names(c_table) <- alphabet
   c_table
 }

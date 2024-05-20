@@ -18,7 +18,12 @@ fm_index <- function(fasta_file, output_dir, compress = FALSE) {
   }
   
   # Read the DNA sequence from the FASTA file
-  dna_seq <- readLines(fasta_file)
+  dna_seq <- tryCatch({
+    readLines(fasta_file)
+  }, error = function(e) {
+    stop("Error reading FASTA file: ", e$message)
+  })
+  
   dna_seq <- paste(dna_seq[!grepl("^>", dna_seq)], collapse = "")
   
   # Append the terminator character
@@ -43,9 +48,9 @@ fm_index <- function(fasta_file, output_dir, compress = FALSE) {
   if (compress) compress_file(occ_file)
   
   # Compute the C table
-  c_table <- c_table(bwt)
+  c_tbl <- c_table(bwt)
   c_table_file <- file.path(output_dir, "c_table.txt")
-  write.table(c_table, c_table_file, row.names = FALSE, col.names = TRUE)
+  write.table(c_tbl, c_table_file, row.names = FALSE, col.names = TRUE)
   if (compress) compress_file(c_table_file)
   
   message("FM Index components written", if (compress) " and compressed", " to ", output_dir)
@@ -61,26 +66,26 @@ compress_file <- function(file_path) {
 
 bw_transform <- function(seq) {
   n <- nchar(seq)
-  rotations <- sapply(1:n, function(i) {
-    paste0(substr(seq, i, n), substr(seq, 1, i-1))
-  })
+  rotations <- vapply(1:n, function(i) {
+    paste0(substr(seq, i, n), substr(seq, 1, i - 1))
+  }, character(1))
   sorted_rotations <- sort(rotations)
   paste0(substr(sorted_rotations, n, n), collapse = "")
 }
 
 suffix_array <- function(seq) {
   n <- nchar(seq)
-  suffixes <- sapply(0:(n-1), function(i) {
+  suffixes <- vapply(0:(n - 1), function(i) {
     substr(seq, i + 1, n)
-  })
+  }, character(1))
   order(suffixes)
 }
 
 occurrence_table <- function(bwt) {
   alphabet <- sort(unique(unlist(strsplit(bwt, ""))))
-  occ <- sapply(alphabet, function(c) {
+  occ <- vapply(alphabet, function(c) {
     cumsum(unlist(strsplit(bwt, "")) == c)
-  })
+  }, numeric(nchar(bwt)))
   colnames(occ) <- alphabet
   occ
 }
@@ -88,10 +93,10 @@ occurrence_table <- function(bwt) {
 c_table <- function(bwt) {
   sorted_bwt <- sort(unlist(strsplit(bwt, "")))
   alphabet <- unique(sorted_bwt)
-  c_table <- sapply(alphabet, function(c) {
+  c_tbl <- vapply(alphabet, function(c) {
     sum(sorted_bwt < c)
-  })
-  names(c_table) <- alphabet
-  c_table
+  }, numeric(1))
+  names(c_tbl) <- alphabet
+  c_tbl
 }
 

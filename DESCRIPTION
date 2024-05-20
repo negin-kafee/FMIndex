@@ -1,13 +1,16 @@
 Package: FMIndex
 Type: Package
-Title: Compute FM Index for a DNA sequence
+Title: FM Index for DNA Sequences
 Version: 1.0.0
 Author: Your Name
-Maintainer: Your Name <your-email@example.com>
-Description: This package provides functions to compute the FM Index for DNA sequences.
-License: MIT + file LICENSE
+Maintainer: Your Name <your.email@example.com>
+Description: This package provides functions to compute the FM Index for a DNA sequence. It includes the Burrows-Wheeler Transform, suffix array, occurrence table, and C table for a given DNA sequence.
+License: GPL-3
 Encoding: UTF-8
-Imports: utils
-Suggests: knitr, rmarkdown, testthat
-VignetteBuilder: knitr
-RoxygenNote: 7.3.1
+LazyData: true
+biocViews: SequenceMatching, DataStructures
+Imports:
+    utils
+URL: https://github.com/yourusername/FMIndex
+BugReports: https://github.com/yourusername/FMIndex/issues
+

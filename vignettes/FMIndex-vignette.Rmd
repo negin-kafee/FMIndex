@@ -1,7 +1,5 @@
 ---
 title: "FMIndex Vignette"
-author: "Your Name"
-date: "2024-05-19"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{FMIndex Vignette}
@@ -11,4 +9,14 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(FMIndex)
+
+# Create an example FASTA file
+writeLines(">example\nAGCTAGCTAGCTA", "example.fasta")
+
+# Compute FM Index
+fm_index("example.fasta", "output", compress = FALSE)
+
+sessionInfo()
 

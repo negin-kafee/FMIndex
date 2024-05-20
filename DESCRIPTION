@@ -2,8 +2,8 @@ Package: FMIndex
 Type: Package
 Title: FM Index for DNA Sequences
 Version: 1.0.0
-Author: Your Name
-Maintainer: Your Name <your.email@example.com>
+Author: Negin Kafee
+Maintainer: Negin Kafee <negin.kafee@yahoo.com>
 Description: This package provides functions to compute the FM Index for a DNA sequence. It includes the Burrows-Wheeler Transform, suffix array, occurrence table, and C table for a given DNA sequence.
 License: GPL-3
 Encoding: UTF-8
@@ -11,6 +11,6 @@ LazyData: true
 biocViews: SequenceMatching, DataStructures
 Imports:
     utils
-URL: https://github.com/yourusername/FMIndex
-BugReports: https://github.com/yourusername/FMIndex/issues
+URL: https://github.com/neginkafee/FMIndex
+BugReports: https://github.com/neginkafee/FMIndex/issues
 

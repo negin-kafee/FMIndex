@@ -1,0 +1,19 @@
+# Ignore the built documentation directory
+inst/doc
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore log files
+*.log
+
+# Ignore backup files
+*~
+
+# Ignore other unnecessary files or directories
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user
+

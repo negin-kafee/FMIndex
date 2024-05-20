@@ -1,0 +1,11 @@
+.RData
+.Rhistory
+.Rproj.user/
+.Rbuildignore
+.vscode/
+.DS_Store
+__pycache__/
+*.tar.gz
+*.tmp
+inst/doc
+

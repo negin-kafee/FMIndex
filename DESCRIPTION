@@ -1,0 +1,13 @@
+Package: FMIndex
+Type: Package
+Title: Compute FM Index for a DNA sequence
+Version: 1.0.0
+Author: Your Name
+Maintainer: Your Name <your-email@example.com>
+Description: This package provides functions to compute the FM Index for DNA sequences.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: utils
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
+RoxygenNote: 7.3.1

@@ -1,0 +1,14 @@
+---
+title: "FMIndex Vignette"
+author: "Your Name"
+date: "2024-05-19"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FMIndex Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+

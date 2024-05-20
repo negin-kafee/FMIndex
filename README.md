@@ -29,3 +29,12 @@ See the package documentation for detailed information on the available function
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
+### Steps to Update the README.md File
+
+1. **Open the README.md File**:
+
+   Open the `README.md` file in your project directory using VIM:
+
+   ```sh
+   vim README.md
+

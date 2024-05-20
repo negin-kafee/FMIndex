@@ -1,5 +1,5 @@
 markdown
-Copy code
+
 # FMIndex
 
 The FMIndex package provides functions to compute the FM Index for a DNA sequence provided in a FASTA file.
@@ -17,7 +17,7 @@ devtools::install_github("negin-kafee/FMIndex")
 Usage
 
 r
-Copy code
+
 library(FMIndex)
 
 # Compute FM Index for a sample FASTA file
@@ -30,12 +30,11 @@ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-mathematica
-Copy code
+mathematics
 
 ### Steps to Update the README.md File
 
-1. **Open the `README.md` File**:
+1. **Open the README.md File**:
 
    Open the `README.md` file in your project directory using VIM:
 

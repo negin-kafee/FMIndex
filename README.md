@@ -14,10 +14,13 @@ install.packages("devtools")
 devtools::install_github("negin-kafee/FMIndex")
 
 Usage
+
+```r
 library(FMIndex)
 
 # Compute FM Index for a sample FASTA file
 fm_index("example.fasta", "output")
+
 
 Documentation
 
@@ -27,6 +30,7 @@ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+```mathematics
 
 ### Steps to Update the README.md File
 
@@ -41,6 +45,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Replace the existing content with the provided content above.
 
-Save and Exit:
+3. Save and Exit:
 
 Save and exit VIM by typing :wq.

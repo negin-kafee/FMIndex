@@ -6,9 +6,11 @@ Authors@R:
     person(given = "Negin", 
            family = "Kafee", 
            email = "negin.kafee@yahoo.com", 
-           role = c("aut", "cre"))
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0004-9006-5234"))
 Description: This package provides functions to compute the FM Index for a DNA sequence. 
-    It includes the Burrows-Wheeler Transform, suffix array, occurrence table, and C table for a given DNA sequence.
+    The FM Index includes the Burrows-Wheeler Transform, suffix array, occurrence table, 
+    and C table for efficient sequence analysis.
 License: GPL-3
 Encoding: UTF-8
 LazyData: false

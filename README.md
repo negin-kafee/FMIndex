@@ -37,3 +37,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    ```sh
    vim README.md
 
+2. Update the File:
+
+Replace the existing content with the provided content above.
+
+Save and Exit:
+
+Save and exit VIM by typing :wq.

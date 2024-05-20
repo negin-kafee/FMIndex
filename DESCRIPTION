@@ -11,7 +11,7 @@ Description: The FMIndex package provides functions to compute the FM Index
 License: MIT
 Encoding: UTF-8
 LazyData: false
-biocViews: SequenceMatching, DataStructures
+biocViews: SequenceMatching, DataRepresentation
 Imports: 
     utils
 Suggests: 
@@ -20,4 +20,3 @@ Suggests:
 VignetteBuilder: knitr
 URL: https://github.com/negin-kafee/FMIndex
 BugReports: https://github.com/negin-kafee/FMIndex/issues
-

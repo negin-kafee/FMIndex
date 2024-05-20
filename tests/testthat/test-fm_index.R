@@ -31,6 +31,3 @@ test_that("FM Index components are correctly written", {
   unlink("example.fasta")
 })
 
-# Run all tests
-test_check("FMIndex")
-

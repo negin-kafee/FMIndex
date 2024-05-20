@@ -13,17 +13,18 @@ install.packages("devtools")
 # Install FMIndex from GitHub
 devtools::install_github("negin-kafee/FMIndex")
 
-Usage
+# Usage
 
+```r
 library(FMIndex)
 
 # Compute FM Index for a sample FASTA file
 fm_index("example.fasta", "output")
 
-Documentation
+# Documentation
 
 See the package documentation for detailed information on the available functions and their usage.
 
-License
+# License
 
 This project is licensed under the MIT License - see the LICENSE file for details.

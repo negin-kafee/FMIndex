@@ -8,13 +8,15 @@ Authors@R:
            email = "negin.kafee@yahoo.com", 
            role = c("aut", "cre"),
            comment = c(ORCID = "0009-0004-9006-5234"))
-Description: This package provides functions to compute the FM Index for a DNA sequence. 
-    The FM Index includes the Burrows-Wheeler Transform, suffix array, occurrence table, 
-    and C table for efficient sequence analysis.
+Description: This package provides functions to compute the FM Index for a DNA sequence.
+    The FM Index includes the Burrows-Wheeler Transform, suffix array, occurrence table,
+    and C table for efficient sequence analysis. These components allow for fast and
+    memory-efficient searches within the DNA sequence, making it suitable for large
+    genomic datasets.
 License: GPL-3
 Encoding: UTF-8
 LazyData: false
-biocViews: SequenceMatching, DataStructures
+biocViews: SequenceMatching, DataRepresentation
 Imports:
     utils
 Suggests:

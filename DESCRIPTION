@@ -1,0 +1,25 @@
+Package: FMIndex
+Type: Package
+Title: FM Index Computation for DNA Sequences
+Version: 1.0.0
+Author: Negin Kafee
+Maintainer: Negin Kafee <negin.kafee@yahoo.com>
+Authors@R: 
+    person("Negin", "Kafee", email = "negin.kafee@yahoo.com", role = c("aut", "cre"), comment = c(ORCID = "0009-0004-9006-5234"))
+Description: The FMIndex package provides functions to compute the FM Index 
+    for a DNA sequence provided in a FASTA file. This includes computation of 
+    the Burrows-Wheeler Transform, suffix array, occurrence table, and C table 
+    for efficient sequence matching and data compression.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+biocViews: SequenceMatching, DataRepresentation
+Imports: 
+    utils
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+URL: https://github.com/negin-kafee/FMIndex
+BugReports: https://github.com/negin-kafee/FMIndex/issues

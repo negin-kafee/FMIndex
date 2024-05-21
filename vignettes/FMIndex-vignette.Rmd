@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "FMIndex Vignette"
 output: rmarkdown::html_vignette
@@ -15,10 +16,10 @@ library(FMIndex)
 Introduction
 
 The FMIndex package provides functions to compute the FM Index for a DNA sequence provided in a FASTA file. This includes computation of the Burrows-Wheeler Transform, suffix array, occurrence table, and C table for efficient sequence matching and data compression.
+
 Example Usage
 
 This example demonstrates how to use the fm_index function to compute the FM Index for a DNA sequence.
-
 
 ```r
 # Create an example FASTA file
@@ -34,32 +35,8 @@ Session Information
 sessionInfo()
 ```
 
+=======
 
-### Building the Vignette
-
-To build the vignette and ensure it is included in the package:
-
-1. **Build the Vignette**:
-   - Run the following in your R console:
-     ```r
-     library(devtools)
-     devtools::build_vignettes()
-     ```
-
-2. **Include the Vignette in the Package**:
-   - Ensure the vignette is properly included in the `inst/doc` directory:
-     ```sh
-     R CMD build FMIndex
-     R CMD check FMIndex_1.0.0.tar.gz
-     ```
-
-### Commit and Push Changes
-
-1. **Commit and Push All Changes**:
-   ```sh
-   git add vignettes/FMIndex-vignette.Rmd
-   git commit -m "Update vignette for FMIndex package"
-   git push
 
 
 
